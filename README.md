@@ -6,7 +6,7 @@ This project explores and analyzes business data using SQL queries. Each query t
 
 ##  Query List
 
-<details>
+
 <summary> Get all orders and customer info</summary>
 
 ```sql
@@ -19,11 +19,11 @@ FROM orders o
 JOIN customers c ON o.customerID = c.customerID;
 ````
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Total quantity sold per product</summary>
 
 ```sql
@@ -37,11 +37,11 @@ GROUP BY p.productID, p.productName
 ORDER BY product_quantity DESC;
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Revenue % contribution by product</summary>
 
 ```sql
@@ -58,11 +58,11 @@ GROUP BY p.productID, p.productName
 ORDER BY perc_revn DESC;
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Top 5 customers by total spend</summary>
 
 ```sql
@@ -76,11 +76,11 @@ ORDER BY customer_spend DESC
 LIMIT 5;
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary>Remove discounts from discontinued products</summary>
 
 ```sql
@@ -93,11 +93,11 @@ WHERE productID IN (
 );
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Shippers with above-average freight cost</summary>
 
 ```sql
@@ -111,11 +111,10 @@ HAVING avg_freight > (
 );
 ```
 
-</details>
 
 ---
 
-<details>
+
 <summary> Monthly sales revenue by employee</summary>
 
 ```sql
@@ -130,11 +129,11 @@ GROUP BY year_, month_, o.employeeID
 ORDER BY year_, month_, o.employeeID;
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Shipper with most high-value orders (>$500)</summary>
 
 ```sql
@@ -155,11 +154,11 @@ GROUP BY o.shipperID
 ORDER BY high_value_orders DESC;
 ```
 
-</details>
+
 
 ---
 
-<details>
+
 <summary> Top-selling employee per product category</summary>
 
 ```sql
@@ -192,4 +191,17 @@ JOIN cat_max_sales cms
 JOIN employees e ON e.employeeID = ces.employeeID;
 ```
 
-</details>
+
+---
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## 🌟 About Me
+
+Hi there! I'm Abhinav Om, currently a 3rd-year undergraduate student at the Indian Institute of Information Technology (IIIT) Ranchi.
+I'm passionate about turning raw data into meaningful insights and am actively working toward a career as a Data Analyst or Business Analyst.
+
+I enjoy solving real-world problems through data, exploring trends, and drawing actionable conclusions that drive decision-making.
+I'm constantly improving my skills in SQL, Excel, Python, and data visualization tools like Power BI and Tableau.
+With hands-on project experience in data warehousing and analytics, I'm building a strong foundation for a future in analytics and consulting.
